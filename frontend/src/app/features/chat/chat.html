@@ -1,0 +1,13 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let msg of messages" class="message">
+      <p class="user"><strong>You:</strong> {{ msg.userMessage }}</p>
+      <p class="ai"><strong>AI:</strong> {{ msg.aiResponse }}</p>
+    </div>
+  </div>
+
+  <div class="input-section">
+    <input [(ngModel)]="message" placeholder="Type your message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
